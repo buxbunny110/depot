@@ -13,7 +13,7 @@ two:
   price: 9.99
 
 ruby:
-  title: 'Ruby'
-  description: 'some cool description for the book'
+  title: Ruby on Rails
+  description: some cool description for the book
   image_url: chatbot.jpg
   price: 2

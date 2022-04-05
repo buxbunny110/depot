@@ -49,12 +49,12 @@ class ProductTest < ActiveSupport::TestCase
 
   test "product name is unique" do
     product = Product.new(
-      title: products(:ruby),
+      title: products(:ruby).title,
       description: 'yyy',
       price: 1,
       image_url: 'fred.jpg'
     )
-    assert product.valid?,
+    assert product.invalid?,
       I18n.translate('errors.messages.taken')
   end
 end
