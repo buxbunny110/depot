@@ -26,4 +26,36 @@ class ProductTest < ActiveSupport::TestCase
     assert product.valid?
 
   end
+
+  def new_product(image_url)
+    Product.new(
+      title: "My Book Title",
+      description: "yyy",
+      price: 1,
+      image_url: image_url)
+  end
+
+  test "image_url" do
+    ok = %w{ fred.gif fred.jpg fred.png FRED.png http://a.bc/x/y/fred.gif }
+    bad = %w{ fred.doc fred.gif/more gred.gif.more }
+    ok.each do |img|
+      assert new_product(img).valid?, "#{img} should not be invalid"
+    end
+
+    bad.each do |img|
+      assert new_product(img).invalid?
+    end
+  end
+
+  test "product name is unique" do
+    product = Product.new(
+      title: products(:ruby),
+      description: 'yyy',
+      price: 1,
+      image_url: 'fred.jpg'
+    )
+    assert product.valid?,
+      I18n.translate('errors.messages.taken')
+  end
 end
+

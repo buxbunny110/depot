@@ -3,11 +3,17 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: chatbot.jpeg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: chatbot.jpeg
   price: 9.99
+
+ruby:
+  title: 'Ruby'
+  description: 'some cool description for the book'
+  image_url: chatbot.jpg
+  price: 2
