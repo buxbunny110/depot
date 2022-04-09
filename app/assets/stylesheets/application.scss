@@ -20,6 +20,7 @@
  }
 
  header.main {
+     width: 100%;
      text-align: center;
      @media (min-width: 30em) {
          text-align: left;
@@ -28,6 +29,13 @@
      margin: 0;
      h1 {
          display: none;
+     }
+     img {
+         cursor: pointer;
+         height: 5em;
+         @media (min-width: 30em) {
+             margin-left: 2em;
+         }
      }
  }
 
@@ -43,7 +51,7 @@
 
      @media (min-width: 30em) {
          flex-direction: row;
-         -webkit-box-orient; horizontal;
+         -webkit-box-orient: horizontal;
      }
 
      nav {
@@ -75,6 +83,10 @@
                  background: none;
                  color: white;
              }
+         }
+
+         .time_rendered {
+             color: white;
          }
      }
      main {

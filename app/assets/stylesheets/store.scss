@@ -25,12 +25,18 @@
                 margin: 2em 0 2em 0;
             }
             img {
-                height: 20em;
+                width: 90%;
                 float: left;
                 padding: 1em;
                 margin-right: 1em;
                 margin-bottom: 1em;
                 box-shadow: 0.176em 0.176em 0.354em 0px rgba(0,0,0,0.75);
+
+            
+                @media (min-width: 30em) {
+                  width: 30%;
+                }
+                 
             }
             .price {
                 font-size: 1.414em;
